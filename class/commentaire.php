@@ -37,7 +37,7 @@ public function getDate()
         
 }
     
-// création des setters
+// création des setters fonction set
     
 public function setId($id)
 {
