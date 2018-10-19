@@ -7,7 +7,7 @@ Class AccesBd{
 
 public static function{
         try{
-            $db = NEW('BASE','USE','PWD');
+            $db = new PDO('BASE','USE','PWD');
 
             }
         catch( Exception$ $Se){
