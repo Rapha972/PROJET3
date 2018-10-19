@@ -11,7 +11,7 @@ public static function{
 
             }
         catch( Exception$ $Se){
-            die('erreur'. $Se->getmessage());
+            die('Erreur'. $Se->getmessage());
         }
     }
 
