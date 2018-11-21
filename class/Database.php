@@ -4,7 +4,7 @@ class Database
 
     const DSN ='mysql:host=localhot;dbname=test;charset=utf8';
     const USER ='root';
-    const PWSD $pwsd ='root';
+    const PWSD $pwsd ='';
     
     public function DBOC()
     {
