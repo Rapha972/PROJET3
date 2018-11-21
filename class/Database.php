@@ -6,7 +6,7 @@ class Database
     const USER ='root';
     const PWSD $pwsd ='root';
     
-    public function Db_connect()
+    public function DBOC()
     {
         try
             {
