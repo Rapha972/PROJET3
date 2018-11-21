@@ -1,5 +1,5 @@
 <?php
-Class AccesBd{
+class DataBase{
     
     const BASE= "mysql:host=localhost;dbname=test;charset=utf8)"
     const USER ="root"
