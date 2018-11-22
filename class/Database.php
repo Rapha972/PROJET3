@@ -1,22 +1,25 @@
 <?php
 class Database
 {
-
-    const DSN ='mysql:host=localhot;dbname=test;charset=utf8';
+    //private $db;
+    const DSN ='mysql:host=localhost;dbname=BLOG;charset=utf8';
     const USER ='root';
-    const PWSD $pwsd ='';
+    const PWSD ='';
     
-    public function DBOC()
+    public function DBO()
     {
         try
             {
-              $db=new PDO(DSN,USER,PWSD);    
+              $db = new PDO(DSN,USER,PWSD);    
               $db->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);  
+           return $db; 
             }
     catch(PDOException $e)
         {
            die('erreur:'.$e->getMessage());
         }
-  return $db;
+        
+        
+        
     }
 }
