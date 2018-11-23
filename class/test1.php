@@ -1,6 +1,5 @@
 
 <?php require('Database.php');
-$req=lispost();
 
 ?>
 
@@ -18,7 +17,8 @@ $req=lispost();
         <p>Derniers billets du blog :</p>
         </head>
     <?php
-    while($data=$req->fetch())
+    $req=lispost();
+        while($data=$req->fetch())
 {    
    ?>    
        <div class="news">
