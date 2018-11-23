@@ -1,3 +1,10 @@
+
+<?php require('Database.php');
+$req=lispost();
+
+?>
+
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -5,31 +12,15 @@
         <title>Mon blog</title>
         
         <!--<link href="style.css" rel="stylesheet" />-->
-    </head>
-        
-    <body>
+   
+        <body>
         <h1>Mon super blog !</h1>
         <p>Derniers billets du blog :</p>
-        <?php
-
-try
-            {
-              $db = new PDO('mysql:host=localhost;dbname=BLOG;charset=utf8','root','root');    
-              $db->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);  
-           //return $db; 
-            }
-    catch(PDOException $e)
-        {
-           die('erreur:'.$e->getMessage());
-        }
-
-$req = $db->query('SELECT * FROM post');
-
-//print_r($req);
-while($data = $req->fetch())
-{
-?>
-           
+        </head>
+    <?php
+    while($data=$req->fetch())
+{    
+   ?>    
        <div class="news">
         <h3>
             <?= htmlspecialchars($data['Title']); ?>

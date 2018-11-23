@@ -1,16 +1,14 @@
 <?php
-class Database
-{
-    //private $db;
-    const DSN ='mysql:host=localhost;dbname=BLOG;charset=utf8';
-    const USER ='root';
-    const PWSD ='';
+   
     
-    public function DBO()
+    function DBO()
     {
+     $DSN ='mysql:host=localhost;dbname=BLOG;charset=utf8';
+     $USER ='root';
+     $PWSD ='root';
         try
             {
-              $db = new PDO(DSN,USER,PWSD);    
+              $db = new PDO($DSN,$USER,$PWSD);    
               $db->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);  
            return $db; 
             }
@@ -18,8 +16,13 @@ class Database
         {
            die('erreur:'.$e->getMessage());
         }
-        
-        
-        
     }
-}
+        
+        function lispost()
+        {
+          $db=DBO();
+          $req=$db->query('SELECT * FROM post');  
+            
+        return $req;
+        }
+    
