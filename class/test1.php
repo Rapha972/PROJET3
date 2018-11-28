@@ -17,7 +17,7 @@
         <p>Derniers billets du blog :</p>
         </head>
     <?php
-    $req=lispost();
+    $req=lisposts();                                
         while($data=$req->fetch())
 {    
    ?>    
